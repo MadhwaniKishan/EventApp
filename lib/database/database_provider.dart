@@ -66,7 +66,6 @@ class DatabaseProvider {
     List<String> eventList = new List();
     events.forEach((event) {
       Event eventGot = Event.fromMapName(event);
-      print(eventGot.name);
       eventList.add(eventGot.name);
     });
     return eventList;
@@ -96,7 +95,6 @@ class DatabaseProvider {
   Future<Event> insert(Event event) async {
     final db = await database;
     await db.insert(EVENT, event.toMap());
-    print(event.toMap().toString());
     return event;
   }
 

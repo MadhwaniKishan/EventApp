@@ -5,7 +5,6 @@ import 'package:flutter_event_app/provider/provider.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
 import 'package:provider/provider.dart';
 
-
 class AddPhotos extends StatefulWidget {
   @override
   _AddPhotosState createState() => _AddPhotosState();

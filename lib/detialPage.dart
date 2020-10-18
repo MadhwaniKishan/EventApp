@@ -65,7 +65,11 @@ class _DetailPageState extends State<DetailPage> {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ),
-                    Text(event.description),
+                    Text(
+                      event.description,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 5,
+                    ),
                   ],
                 ),
                 Row(
@@ -78,7 +82,11 @@ class _DetailPageState extends State<DetailPage> {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ),
-                    Text(event.address),
+                    Text(
+                      event.address,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 5,
+                    ),
                   ],
                 ),
                 Row(
@@ -158,7 +166,6 @@ class _DetailPageState extends State<DetailPage> {
   deleteEvent() {
     DatabaseProvider.db.deleteEvent(widget.event);
     Navigator.pop(context);
-
   }
 
   Future<void> _onMapCreated(GoogleMapController controller) async {

@@ -87,8 +87,10 @@ class _AddLocationState extends State<AddLocation> {
     event.long = lng.toString();
     event.photosUrl = appState.photosUrl;
     event.insertIntoDb();
-    Navigator.of(context, rootNavigator: true)
-        .push(MaterialPageRoute(builder: (context) => MyHomePage(title: "Event app",)));
+    Navigator.of(context, rootNavigator: true).push(MaterialPageRoute(
+        builder: (context) => MyHomePage(
+              title: "Event app",
+            )));
   }
 
   _handleTap(LatLng point) {

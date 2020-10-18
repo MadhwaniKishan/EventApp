@@ -4,7 +4,6 @@ import 'package:flutter_event_app/provider/provider.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import 'model/event.dart';
 
 class AddEvent extends StatefulWidget {
   @override
@@ -205,7 +204,6 @@ class _AddEventState extends State<AddEvent> {
   }
 
   goNext(context) {
-
     final appState = Provider.of<ProviderClass>(context);
     appState.name = nameController.text;
     appState.description = descriptionController.text;
